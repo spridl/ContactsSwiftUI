@@ -15,8 +15,8 @@ struct ContactListView: View {
         NavigationView {
             List(contacts) { contact in
                 Section(contact.fullName) {
-                    ContactRowView(imageName: "tray", text: contact.email)
-                    ContactRowView(imageName: "phone", text: contact.phoneNumber)
+                    ContactRowView(imageName: Contacts.email.rawValue, text: contact.email)
+                    ContactRowView(imageName: Contacts.phone.rawValue, text: contact.phoneNumber)
                 }
                 .listStyle(.insetGrouped)
                 .textCase(nil)

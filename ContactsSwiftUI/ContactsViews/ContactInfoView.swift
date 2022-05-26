@@ -18,8 +18,8 @@ struct ContactInfoView: View {
                 Spacer()
             }
                 
-            ContactRowView(imageName: "tray", text: contact.email)
-            ContactRowView(imageName: "phone", text: contact.phoneNumber)
+            ContactRowView(imageName: Contacts.email.rawValue, text: contact.email)
+            ContactRowView(imageName: Contacts.phone.rawValue, text: contact.phoneNumber)
         }
         .navigationTitle(contact.fullName)
     }

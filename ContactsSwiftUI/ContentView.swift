@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+enum TabBarImageItem: String {
+    case contacts = "person.3"
+    case numbers = "phone"
+}
+
 struct ContentView: View {
     let persons = Person.getContactList()
     let boardName = "Contact List"
@@ -15,12 +20,12 @@ struct ContentView: View {
         TabView {
             ContactsView(boardName: boardName, contacts: persons)
                 .tabItem {
-                    Image(systemName: "person.3")
+                    Image(systemName: TabBarImageItem.contacts.rawValue)
                     Text("Contacts")
                 }
             ContactListView(boardName: boardName, contacts: persons)
                 .tabItem {
-                    Image(systemName: "phone")
+                    Image(systemName: TabBarImageItem.numbers.rawValue)
                     Text("Numbers")
                 }
         }
